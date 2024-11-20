@@ -10,9 +10,10 @@ class SummaryItem extends StatelessWidget {
   @override
   Widget build(context) {
     final isCorrectAnswer =
-        itemData['correct_answer'] == itemData['user_answer'];
+        itemData['user_answer'] == itemData['correct_answer'];
 
     return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         QuestionIdentifier(
           isCorrectAnswer: isCorrectAnswer,
